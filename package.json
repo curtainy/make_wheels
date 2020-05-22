@@ -1,0 +1,23 @@
+{
+  "name": "wheels",
+  "version": "0.0.1",
+  "description": "\u001b[D\u001b[D\u001b[2是一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curtainy/make_wheels.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "curtainy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/curtainy/make_wheels/issues"
+  },
+  "homepage": "https://github.com/curtainy/make_wheels#readme"
+}
