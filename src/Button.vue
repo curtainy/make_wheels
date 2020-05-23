@@ -1,6 +1,8 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}">
-    <g-icon :name="icon"></g-icon>
+  <button class="g-button" 
+         :class="{[`icon-${iconPosition}`]: true}">
+    <g-icon :name="icon" class="icon" v-if="icon && !isLoading"></g-icon>
+    <g-icon name="loading" :class="{loading:isLoading}" class="icon" v-if="isLoading"></g-icon>
     <div class="content">
       <slot>按钮</slot>
     </div>
@@ -8,7 +10,20 @@
 </template>
 <script>
 export default {
-  props: ['icon','iconPosition']
+  props: {
+    icon: {
+      type: String,
+      default: undefined
+    },
+    iconPosition: {
+      type: String,
+      default: undefined
+    },
+    isLoading: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 <style scoped>
@@ -45,4 +60,18 @@ export default {
     margin-right: 0;
     margin-left: 0.3em;
   }
+
+  @keyframes rotate {
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+  .loading{
+    animation: rotate 1s linear infinite;
+  }
+
 </style>

@@ -24,12 +24,11 @@
 <body>
   <div id="app">
     <g-button></g-button>
-    <g-button icon="setting">设置</g-button>
-    <g-button icon="setting" icon-position="right">设置</g-button>
-    <g-icon name="download"></g-icon>
+    <g-button icon="setting" :is-loading="isLoading1" @click.native="isLoading1=!isLoading1">设置</g-button>
+    <g-button icon="setting" icon-position="right" :is-loading="isLoading2" @click.native="isLoading2=!isLoading2">设置</g-button>
   </div>
 
   <script src="./src/app.js"></script>
-  <script src="//at.alicdn.com/t/font_1836275_ngablkhyczp.js"></script>
+  <script src="//at.alicdn.com/t/font_1836275_9i8in1fmur.js"></script>
 </body>
 </html>
